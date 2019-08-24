@@ -1,0 +1,9 @@
+name: FlyDay
+version: ${project.version}
+main: me.lwoo.flyday.FlyDay
+api-version: 1.13
+authors: [lwoollett]
+description: Flyday sets a day when the whole server can fly!
+commands:
+  setflyday:
+    permission: flyday.setday
