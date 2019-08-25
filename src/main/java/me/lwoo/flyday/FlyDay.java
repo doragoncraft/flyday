@@ -43,7 +43,7 @@ public class FlyDay extends JavaPlugin {
 
     public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args){
         System.out.println(args);
-        if (commandLabel.equals("setflyday")){
+        if (commandLabel.equals("setflyday") && args.length >=1){
             if(sender.hasPermission("flyday.setday")) {
                 if (daysOfWeek.contains(args[0])) {
                     //Day is valid day of week
@@ -57,6 +57,9 @@ public class FlyDay extends JavaPlugin {
                 sender.sendMessage(ChatColor.RED + "Sorry, you don't have permission to do that");
                 return true;
             }
+        }else{
+            sender.sendMessage("You need to enter a day of the week");
+            return true;
         }
         return true;
     }
